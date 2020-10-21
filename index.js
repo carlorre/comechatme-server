@@ -4,6 +4,7 @@ const cors = require('cors');
 const io = require('socket.io')(server, { pingInterval: 20000, pingTimeout: 1000 });
 const moment = require('moment');
 const logger = require('./logger.js');
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 
@@ -50,4 +51,4 @@ io.on('connection', (socket) => {
 });
 
 // eslint-disable-next-line no-console
-server.listen(5000, () => console.log('listening on port 5000'));
+server.listen(PORT, () => console.log(`Listening on ${ PORT }`));
