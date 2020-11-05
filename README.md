@@ -1,4 +1,4 @@
 # comechatme-server
 
-npm i
+npm i  
 npm start
